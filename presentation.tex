@@ -1,4 +1,4 @@
-\documentclass[10pt]{beamer}
+\documentclass[12pt]{beamer}
 
 \usetheme[sectionpage=none]{metropolis}
 \usepackage{appendixnumberbeamer}
@@ -19,14 +19,16 @@
 \renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
 \renewcommand{\arraystretch}{1.5}
 
+\pretocmd{\tableofcontents}{\begin{minipage}{\textwidth}}{}{}
+\apptocmd{\tableofcontents}{\end{minipage}}{}{}
+
 % Presentation metadata
 \title{Hard Disk Drives (HDD)}
 \subtitle{A technical development journey}
 \date{\today, Rapperswil}
 \author{Cyrill Gsell \& Fabian Hauser}
-\institute{Computer Science (Sofware Engineering) \\
+\institute{Computer Science \\
 	TecBEC Presentation FS 2016}
-% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \begin{document}
 
@@ -34,12 +36,12 @@
 
 \begin{frame}{Table of contents}
   \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
+  \tableofcontents
 \end{frame}
 
 \section{Introduction}
-\section{What is a Hard Disk Drive}
-\begin{frame}[fragile]{What is a Hard Disk Drive}
+\section{What is a Hard Disk Drive?}
+\begin{frame}[fragile]{What is a Hard Disk Drive?}
 	\begin{itemize}
 		\item Data storage
 		\item How does it work?
@@ -51,8 +53,8 @@
 	\end{itemize}
 \end{frame}
 
-\section{Can't we keep Floppy Disks?}
-\begin{frame}[fragile]{Can't we keep Floppy Disks?}
+\section{...but why can't we keep floppy disks?}
+\begin{frame}[fragile]{...but why can't we keep floppy disks?}
 	\begin{itemize}
 		\item Efficiency
 		\item Capacity
@@ -61,22 +63,21 @@
 	\end{itemize}		
 \end{frame}
 
-\section{First attempts}
-\begin{frame}[fragile]{First attempts}
+\begin{frame}[fragile]{Evolution: First attempts}
 	TODO!	
 \end{frame}
 
 \section{Evolution}
-\begin{frame}[fragile]{Evolution}
+\begin{frame}[fragile]{Evolution: Development}
 	TODO!	
 \end{frame}
 
-\section{State of the art}
-\begin{frame}[fragile]{State of the art}
+
+\begin{frame}[fragile]{Evolution: State of the art}
 	TODO!	
 \end{frame}
 
-\section{Prospect}
+\section{A glance into the future}
 \begin{frame}[fragile]{Prospect}
 	TODO!	
 \end{frame}
