@@ -10,6 +10,16 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{Hard Disk Drive}}\xspace}
 
+
+% make lists more compact:
+\newlength{\wideitemsep}
+\setlength{\wideitemsep}{.5\itemsep}
+\addtolength{\wideitemsep}{-2pt}
+\let\olditem\item
+\renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
+\renewcommand{\arraystretch}{1.5}
+
+% Presentation metadata
 \title{Hard Disk Drives (HDD)}
 \subtitle{A technical development journey}
 \date{\today, Rapperswil}
@@ -39,12 +49,10 @@
 				\item Electronics
 			\end{itemize}
 	\end{itemize}
-	
-	\end{list}
 \end{frame}
 
 \section{Can't we keep Floppy Disks?}
-\begin{frame}
+\begin{frame}[fragile]{Can't we keep Floppy Disks?}
 	\begin{itemize}
 		\item Efficiency
 		\item Capacity
@@ -54,22 +62,22 @@
 \end{frame}
 
 \section{First attempts}
-\begin{frame}
+\begin{frame}[fragile]{First attempts}
 	TODO!	
 \end{frame}
 
 \section{Evolution}
-\begin{frame}
+\begin{frame}[fragile]{Evolution}
 	TODO!	
 \end{frame}
 
 \section{State of the art}
-\begin{frame}
+\begin{frame}[fragile]{State of the art}
 	TODO!	
 \end{frame}
 
 \section{Prospect}
-\begin{frame}
+\begin{frame}[fragile]{Prospect}
 	TODO!	
 \end{frame}
 
