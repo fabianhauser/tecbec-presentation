@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_GB
 \documentclass[12pt]{beamer}
 
 \usetheme[sectionpage=none]{metropolis}
@@ -46,22 +47,104 @@
 		\item Data storage
 		\item How does it work?
 			\begin{itemize}
-				\item Rotating disk
-				\item Magnetism tracks: ~75nm wide.
-				\item Electronics
+				\item Logical view
+				\item Physical view
 			\end{itemize}
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{What is a Hard Disk Drive: Von Neumann scheme}
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=\linewidth]{img/vonneumann.png}
+		\caption{CC-BY-SA by Kapooht, Wikipedia}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{What is a Hard Disk Drive: Logical View}
+ \begin{columns}[c]
+ 	\begin{column}[c]{.5\textwidth}
+ 		\begin{figure}[p]
+ 			\centering
+ 			\includegraphics[width=\linewidth]{img/logical.png}
+ 			\caption{CC0, Wikipedia}
+ 		\end{figure}
+ 	\end{column}
+ 	\begin{column}[c]{.5\textwidth}
+ 		\begin{description}
+	 		\item[A] Track
+	 		\item[B] Sector
+	 		\item[C] Sector of track
+	 		\item[D] Cluster of sectors
+		\end{description}
+ 	\end{column}
+ \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{What is a Hard Disk Drive: Physical View}
+ \begin{columns}[c]
+   	\begin{column}[c]{.4\textwidth}
+   		\begin{figure}[p]
+   			\centering
+   			\includegraphics[width=\linewidth]{img/hdd_open.jpg}
+   			\caption{CC0,Wikipedia}
+   		\end{figure}
+   	\end{column}
+   	\begin{column}[c]{.6\textwidth}
+   		\begin{itemize}
+   			\item Rotating disk: usually 7200 rpm
+   			\item Writing and reading Head
+   			\item Magnet
+   			\item Electronics
+   		\end{itemize}
+   	\end{column}
+ \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{What is a Hard Disk Drive: Physical View}
+	Bit encoding / Magnetic structure
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=\linewidth]{img/magnetic_track.png}
+	\caption{CC-BY-SA Allan Haldane, Wikipedia}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]{What is a Hard Disk Drive: Physical View}
+	Magnetic structure: close up
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/floppy_physical.jpg}
+		\caption{CC-BY-SA Matesy GmbH, Wikipedia}
+	\end{figure}
+\end{frame}
+
 \section{...but why can't we keep floppy disks?}
 \begin{frame}[fragile]{...but why can't we keep floppy disks?}
-	HDDs are better considering:
-	\begin{itemize}
-		\item Capacity
-		\item Durability
-		\item Price
-		\item Efficiency / Speed
-	\end{itemize}		
+	
+	 \begin{columns}[c]
+	 	\begin{column}[c]{.5\textwidth}
+	 		\begin{figure}[p]
+	 			\centering
+	 			\includegraphics[width=\linewidth]{img/floppy_ms_office_crop.jpg}
+	 			\caption{GFDL, JP, Wikipedia}
+	 		\end{figure}
+	 	\end{column}
+	 	\begin{column}[c]{.5\textwidth}
+	 		HDDs are better considering:
+	 		\begin{itemize}
+	 			\item Capacity
+	 			\item Durability
+	 			\item Price
+	 			\item Efficiency / Speed
+	 		\end{itemize}
+	 		
+		 	\hfill
+		 	
+		 	(CD-ROM and USB-Sticks for portable applications.)
+	 	\end{column}
+	 \end{columns}
 \end{frame}
 
 \section{Evolution}
@@ -81,22 +164,39 @@
 \section{A glance into the future}
 \begin{frame}[fragile]{A glance into the future}
 	\begin{itemize}
+		\item	In many areas superseded with SSDs / flash storage
 		\item	SSHD: SSD and HDD combined \\
 				$\rightarrow$ good price \& capacity
-		\item	Physical storage density limit: ~75nm tracks. \\
+		\item	Physical storage density limit: $\approx75$nm tracks. \\
 			Work arounds:
 			\begin{itemize}
 				\item	Helium filling
-				\item	SHT
-				\item	TDMR
+				\item	Heat assistance (microwave)
+				\item	Shingle Magnetic Recording \emph{(SMR)}
+				\item	Two-Dimensional Magnetic Recording \emph{(TDMR)}
 			\end{itemize}
-		\item	In many areas superseded with SSDs
 	\end{itemize}
 \end{frame}
 \note[itemize]{
 	\item SMR (Shingle Magnetic Recording) Overlying the tracks
 	\item TDMR (Two-Dimensional Magnetic Recording)
 }
+
+\begin{frame}[fragile]{A glance into the future: SMR}
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=1\linewidth]{img/smr.png}
+		\caption{Wood, Williams et al., 2009}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{A glance into the future: TDMR}
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.85\linewidth]{img/hdd_2d_slides.png}
+		\caption{Hitatchi et al., 2010}
+	\end{figure}
+\end{frame}
 
 \section{Questions}
 \begin{frame}[standout]
@@ -107,6 +207,7 @@
 \begin{frame}[fragile]{Ressources}
 	\begin{itemize}
 		\item \url{http://www.ewh.ieee.org/r6/scv/mag/MtgSum/Meeting2010_10_Presentation.pdf}
+		\item \url{https://events.linuxfoundation.org/sites/events/files/slides/SMR-LinuxConUSA-2014.pdf}
 	\end{itemize}
 \end{frame}
 
